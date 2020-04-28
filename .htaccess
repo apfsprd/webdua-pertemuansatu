@@ -1,0 +1,21 @@
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+
+#RewriteRule done index.php [L]
+
+#RewriteCond %{REQUEST_URI} user
+#RewriteRule user http://localhost/dashboard/
+
+
+#directory browsing
+#Options All -Indexes
+
+#Protect the .htaccess
+#<files .htaccess="">
+#order allow,deny
+#deny from all
+#</files>
