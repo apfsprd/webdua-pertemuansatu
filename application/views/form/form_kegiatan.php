@@ -1,8 +1,9 @@
 <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800"><?php echo $title;?></h1>
-       
+          <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
+          <?= $this->session->flashdata('message'); ?>
+
           <div class="row">
 
             <div class="col-lg-6">
@@ -29,8 +30,8 @@ echo form_open('Home/save_form_kegiatan', $attributes);
     <input type="text" name="pembicara" class="form-control" id="inputAddress" >
   </div>
   <div class="form-group">
-    <label for="inputAddress">Tangal Pelaksaan</label>
-    <input type="text" name="tgl_pelaksanaan" class="form-control form_date" id="form_date" >
+    <label for="inputAddress">Tangal Pelaksanaan</label>
+    <input type="date" name="tgl_pelaksanaan" class="form-control form_date" id="form_date" >
   </div>
   <div class="form-group">
     <label for="inputAddress2">Alamat</label>
@@ -38,13 +39,13 @@ echo form_open('Home/save_form_kegiatan', $attributes);
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputCity">Propinsi</label>
-      <input type="text" name="propinsi" class="form-control" id="inputCity">
+      <label for="inputCity">Provinsi</label>
+      <input type="text" name="provinsi" class="form-control" id="inputCity">
     </div>
     <div class="form-group col-md-6">
       <label for="inputState">Kota</label>
       <select id="inputState" class="form-control" name="kota">
-        <option selected>Jakarta</option>
+        <option selected value="Kota Tangerang">Kota Tangerang</option>
         <option>...</option>
       </select>
     </div>
