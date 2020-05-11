@@ -16,8 +16,8 @@ class Home extends CI_Controller {
         $data['confirm']=$confirm;
 
         $this->load->model('Modkegiatan');
-        $data['read_kegiatan']=$this->Modkegiatan->read();  
-         $this->template->load('theme','form/form_kegiatan',$data);
+        $data['read_kegiatan'] = $this->Modkegiatan->read();  
+        $this->template->load('theme','form/form_kegiatan',$data);
     }
 
     public function tes()
