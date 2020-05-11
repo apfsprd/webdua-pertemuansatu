@@ -33,4 +33,13 @@ class Modkegiatan extends CI_Model
         $this->db->delete('tbl_kegiatan');
     }
 
+    public function read(){  	
+    	$query=$this->db->get('tbl_kegiatan');
+    	if($query->num_rows()>0){
+    		return $query->result();
+    	}else{
+    		return 0;
+    	}
+    }
+
 }
